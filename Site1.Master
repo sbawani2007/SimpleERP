@@ -1,0 +1,152 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site1.master.cs" Inherits="SimpleERP.Site1" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <style>
+body {
+    font-family: "Lato", sans-serif;
+}
+
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+
+.sidenav a:hover {
+    color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+</style>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+     
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+     <div id="mySidenav" class="sidenav">
+        
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+          <ul>
+             <li>
+                 <a href="#">Products</a>
+                 <ul>
+                     <li>
+                         <a href="/Products/Categories.aspx">Catalogs</a>
+                     </li>
+                     <li>
+                         <a href="/Products/Products.aspx">Items</a>
+                     </li>
+                 </ul>
+             </li>
+               <li>
+                 <a href="#">Sales</a>
+                    <ul>
+                     <li>
+                         <a href="/Sales/SaleOrders.aspx">Order</a>
+                     </li>
+                     <li>
+                         <a href="/Sales/SalesInvoice.aspx">Invoice</a>
+                     </li>
+                 </ul>
+             </li>
+               <li>
+                 <a href="#">Purchase</a>
+                    <ul>
+                     <li>
+                         <a href="/Purchase/PurchaseOrders.aspx">Orders</a>
+                     </li>
+                     <li>
+                         <a href="/Purchase/PurchaseInvoice.aspx">Invoice</a>
+                     </li>
+                 </ul>
+             </li>
+              <li>
+                  <a href="#">Accounts</a>
+                  <ul>
+                      <li>
+                          <a href="#">Cash IN</a>
+                      </li>
+                      <li>
+                          <a href="#">Cash Out</a>
+                      </li>
+                      <li>
+                          <a href="#">Account Heads</a>
+                      </li>
+                  </ul>
+              </li>
+               <li>
+                 <a href="#">Reprts</a>
+                    <ul>
+                      <li>
+                          <a href="/Reports/InventoryReport.aspx">Inventory</a>
+                      </li>
+                      <li>
+                          <a href="/Reports/CashTransactionReport.aspx">Cash</a>
+                      </li>
+                      
+                  </ul>
+             </li>
+               <li>
+                 <a href="#">Administration</a>
+             </li>
+         </ul>
+  
+  
+</div>
+
+<h2>Simple ERP System</h2>
+<p>.</p>
+<span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; open menu</span>
+    <br />
+    <br />
+
+<script>
+    function openNav() {
+        document.getElementById("mySidenav").style.width = "250px";
+    }
+
+    function closeNav() {
+        document.getElementById("mySidenav").style.width = "0";
+    }
+</script>
+    <form id="form1" runat="server">
+       
+     <div>
+        <asp:ContentPlaceHolder ID="body" runat="server">
+        
+        </asp:ContentPlaceHolder>
+    </div>
+    </form>
+</body>
+</html>

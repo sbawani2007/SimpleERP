@@ -59,9 +59,24 @@
   <ItemGroup>
     <Content Include="Admin\Employee.aspx" />
     <Content Include="Admin\Register.aspx" />
+    <Content Include="Admin\Users.aspx" />
+    <Content Include="Customer\Customers.aspx" />
     <Content Include="DBScript\simpleerp.sql" />
     <Content Include="Default.aspx" />
+    <Content Include="Global.asax" />
+    <Content Include="images\minus.png" />
+    <Content Include="images\plus.png" />
+    <Content Include="Products\Categories.aspx" />
+    <Content Include="Products\Products.aspx" />
+    <Content Include="Purchase\PurchaseInvoice.aspx" />
+    <Content Include="Purchase\PurchaseOrders.aspx" />
+    <Content Include="Reports\CashTransactionReport.aspx" />
+    <Content Include="Reports\InventoryReport.aspx" />
+    <Content Include="Sales\SaleOrders.aspx" />
+    <Content Include="Sales\SalesInvoice.aspx" />
+    <Content Include="Supplier\Suppliers.aspx" />
     <Content Include="Web.config" />
+    <Content Include="WebForm1.aspx" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Admin\Employee.aspx.cs">
@@ -78,6 +93,42 @@
     <Compile Include="Admin\Register.aspx.designer.cs">
       <DependentUpon>Register.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Admin\Users.aspx.cs">
+      <DependentUpon>Users.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Users.aspx.designer.cs">
+      <DependentUpon>Users.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\CashTransactionReport.aspx.cs">
+      <DependentUpon>CashTransactionReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Reports\CashTransactionReport.aspx.designer.cs">
+      <DependentUpon>CashTransactionReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\InventoryReport.aspx.cs">
+      <DependentUpon>InventoryReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Reports\InventoryReport.aspx.designer.cs">
+      <DependentUpon>InventoryReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebForm1.aspx.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebForm1.aspx.designer.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
+    </Compile>
+    <Content Include="App_Code\OrderDetails.cs" />
+    <Compile Include="Customer\Customers.aspx.cs">
+      <DependentUpon>Customers.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Customer\Customers.aspx.designer.cs">
+      <DependentUpon>Customers.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -85,9 +136,69 @@
     <Compile Include="Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Products\Categories.aspx.cs">
+      <DependentUpon>Categories.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Products\Categories.aspx.designer.cs">
+      <DependentUpon>Categories.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Products\Products.aspx.cs">
+      <DependentUpon>Products.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Products\Products.aspx.designer.cs">
+      <DependentUpon>Products.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Purchase\PurchaseInvoice.aspx.cs">
+      <DependentUpon>PurchaseInvoice.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Purchase\PurchaseInvoice.aspx.designer.cs">
+      <DependentUpon>PurchaseInvoice.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Purchase\PurchaseOrders.aspx.cs">
+      <DependentUpon>PurchaseOrders.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Purchase\PurchaseOrders.aspx.designer.cs">
+      <DependentUpon>PurchaseOrders.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Sales\SaleOrders.aspx.cs">
+      <DependentUpon>SaleOrders.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Sales\SaleOrders.aspx.designer.cs">
+      <DependentUpon>SaleOrders.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Sales\SalesInvoice.aspx.cs">
+      <DependentUpon>SalesInvoice.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Sales\SalesInvoice.aspx.designer.cs">
+      <DependentUpon>SalesInvoice.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Site1.Master.cs">
+      <DependentUpon>Site1.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Site1.Master.designer.cs">
+      <DependentUpon>Site1.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Supplier\Suppliers.aspx.cs">
+      <DependentUpon>Suppliers.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Supplier\Suppliers.aspx.designer.cs">
+      <DependentUpon>Suppliers.aspx</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Site1.Master" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -96,13 +207,9 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Customer\" />
     <Folder Include="Document\" />
     <Folder Include="Finance\" />
     <Folder Include="Home\" />
-    <Folder Include="Purchase\" />
-    <Folder Include="Reports\" />
-    <Folder Include="Sales\" />
     <Folder Include="Scripts\" />
     <Folder Include="Style\" />
     <Folder Include="Utility\" />
@@ -115,6 +222,10 @@
     <ProjectReference Include="..\ERP.Manager\ERP.Manager.csproj">
       <Project>{fbea0ca2-5587-4c3f-903f-0dd5450b8e9b}</Project>
       <Name>ERP.Manager</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\GenericFunctions\GenericFunctions.csproj">
+      <Project>{83906658-1deb-4f43-a528-48be0f704a08}</Project>
+      <Name>GenericFunctions</Name>
     </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
